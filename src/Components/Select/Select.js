@@ -11,7 +11,7 @@ const Select = () => {
     const dispatch = useDispatch()
     const [country, setCountry] = useState('Select Your Country')
     const [isClose, setIsClose] = useState(false)
-    useEffect(() => { dispatch(getCountries()) })
+    useEffect(() => { dispatch(getCountries()) }, [])
 
     return (
         <>
