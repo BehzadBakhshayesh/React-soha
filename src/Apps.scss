@@ -1,0 +1,20 @@
+$color1: #ddfe5a;
+$color2: #06a9a0;
+
+.App {
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+  section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgb(221,254,90);
+    background: linear-gradient(180deg, rgba(221,254,90,1) 7%, rgba(6,169,160,1) 85%);
+    .contents {
+      position: relative;
+      top: 150px;
+    }
+  }
+}

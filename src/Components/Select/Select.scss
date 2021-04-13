@@ -1,0 +1,83 @@
+$color1: #ddfe5a;
+$color2: #06a9a0;
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Select {
+  width: 500px;
+  height: 60px;
+  font-size: 1.8rem;
+  background-color: $color2;
+  position: relative;
+  z-index: 1000;
+  .header {
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    padding: 0 0 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    .toggle {
+      cursor: pointer;
+      @include flex;
+      .close {
+        margin-right: 5px;
+      }
+      .innerToggle {
+        @include flex;
+        background-color: $color1;
+        border-radius: 50px;
+      }
+    }
+  }
+  .closeHeader {
+    color: $color2;
+    background-color: $color1;
+    border: 5px solid $color2;
+  }
+  .openHeader {
+    color: $color1;
+    background-color: $color2;
+    border: 5px solid $color1;
+  }
+  .selectList {
+    width: 100%;
+    height: 250px;
+    background-color: $color2;
+    border-radius: 0 0 35px 35px;
+    overflow-y: auto;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    .listRow {
+      cursor: pointer;
+      color: $color1;
+      text-align: center;
+      padding: 8px;
+      border-bottom: 1px solid $color1;
+      &:hover {
+        color: $color2;
+        background-color: $color1;
+      }
+    }
+  }
+}
+.closeSelect {
+  border-radius: 35px 35px 0 0;
+}
+.openSelect {
+  background-color: rgba(255, 255, 255, 0);
+}

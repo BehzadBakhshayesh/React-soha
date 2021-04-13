@@ -1,0 +1,16 @@
+$color1: #ddfe5a;
+$color2: #06a9a0;
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0px;
+  margin: 0;
+  font-family: sans-serif;
+  font-size: 10px;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}

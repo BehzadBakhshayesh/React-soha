@@ -1,0 +1,58 @@
+$color1: #ddfe5a;
+$color2: #06a9a0;
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.DropDown {
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  .label {
+    font-size: 1.4rem;
+  }
+  .iconContainer {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    @include flex;
+  }
+  .dropDownList {
+    width: 150px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 190%;
+    left: -50%;
+    right: 0;
+    z-index: 10;
+    display: none;
+    li {
+      width: 100%;
+      @include flex;
+      .link {
+        width: 100%;
+        height: 100%;
+        padding: 8px 0;
+        @include flex;
+        text-decoration: none;
+        color: $color1;
+        background-color: $color2;
+        border: 1px solid $color1;
+        font-size: 1.4rem;
+        &:hover {
+          color: $color2;
+          background-color: $color1;
+          border: 1px solid $color2;
+        }
+      }
+    }
+  }
+  &:hover .dropDownList {
+    display: block;
+  }
+}

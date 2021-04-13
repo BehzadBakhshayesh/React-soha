@@ -1,0 +1,39 @@
+$color1: #ddfe5a;
+$color2: #06a9a0;
+
+.NavItem{
+    width: 75px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    &:hover{
+        background-color: $color1 ;    
+    }
+    &:active{
+        background-color: $color2 ;
+        border: 3px solid $color1;   
+    }
+    .link{
+        text-decoration: none;
+        width: 100%;
+            height: 100%;
+        div{
+            font-size: 1.4rem; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            &:hover{
+                color: $color2;
+            }
+            &:active{
+                color: $color1; 
+            }
+        }
+    }
+   
+}
